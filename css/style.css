@@ -9093,7 +9093,7 @@ a {
     right: 0;
     left: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.6);
+    background: linear-gradient(to right, rgba(25, 25, 40, 0.9) 50%, transparent 50%);
     z-index: 1; }
   .hero-2 > .container {
     position: relative;
