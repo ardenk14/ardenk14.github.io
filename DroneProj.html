@@ -1,0 +1,397 @@
+<!-- /*
+* Template Name: Archiark
+* Template Author: Untree.co
+* Tempalte URI: https://untree.co/
+* License: https://creativecommons.org/licenses/by/3.0/
+*/ -->
+<!doctype html>
+<html lang="en">
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<meta name="author" content="Arden Knoll">
+	<link rel="shortcut icon" href="images/head-black.png">
+
+	<meta name="description" content="" />
+	<meta name="keywords" content="bootstrap, bootstrap5" />
+	
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="fonts/icomoon/style.css">
+	<link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+	<link rel="stylesheet" href="css/tiny-slider.css">
+	<link rel="stylesheet" href="css/aos.css">
+	<link rel="stylesheet" href="css/glightbox.min.css">
+	<link rel="stylesheet" href="css/style.css">
+
+	<title>Drone Hacking</title>
+</head>
+<body>
+
+	<div class="site-mobile-menu site-navbar-target">
+		<div class="site-mobile-menu-header">
+			<div class="site-mobile-menu-close">
+				<span class="icofont-close js-menu-toggle"></span>
+			</div>
+		</div>
+		<div class="site-mobile-menu-body"></div>
+	</div>
+
+	<nav class="site-nav">
+		<div class="container">
+			<div class="site-navigation">
+				<a href="index.html" class="logo m-0 float-start">J. Arden Knoll<span class="text-primary"></span> </a>
+
+				<ul class="js-clone-nav d-none d-lg-inline-block text-start site-menu float-start">
+					<li><a href="index.html">Home</a></li>
+					<li class="active"><a href="about.html">About</a></li>
+					<li class="has-children">
+						<a href="projects.html">Projects</a>
+						<!--<ul class="dropdown">
+							<li><a href="#">Commercial Building</a></li>
+							<li><a href="#">Cultural Lifestyle</a></li>
+							<li class="has-children">
+								<a href="#">Dropdown</a>
+								<ul class="dropdown">
+									<li><a href="#">Sub Menu One</a></li>
+									<li><a href="#">Sub Menu Two</a></li>
+									<li><a href="#">Sub Menu Three</a></li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li><a href="services.html">Services</a></li>
+					
+					<li><a href="contact.html">Contact Us</a></li>-->
+				</ul>
+
+				
+
+				<!--<a href="#" class="burger ml-auto float-end site-menu-toggle light js-menu-toggle d-inline-block d-lg-none" data-toggle="collapse" data-target="#main-navbar">
+					<span></span>
+				</a>
+				<ul class="site-menu float-end d-none d-md-block">
+					<li><a href="#" class="d-flex align-items-center text-white h2 fw-bold"><span class="icon-phone me-2"></span> <span>+ 2 292 4392 327</span></a></li>
+				</ul>-->
+
+			</div>
+		</div>
+	</nav>
+
+	<div class="hero-2 overlay2" style="background-image: url('images/DroneFlight.gif');">
+		<div class="container">
+			<div class="row align-items-center">
+				<div class="col-lg-5 mx-auto ">
+					<h1 class="mb-5 text-center"><span>Autonomous Drone</span></h1>
+
+
+					<!--<div class="intro-desc text-left">
+						<div class="line"></div>
+						<p>Delectus voluptatum distinctio quos eius excepturi sunt pariatur, aut, doloribus officia ea molestias beatae laudantium, quam odio ipsum veritatis est maiores velit quasi blanditiis et natus accusamus itaque.</p>
+					</div>-->
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="section sec-1">
+		<div class="container">
+			<div class="row g-0">
+				<div class="col-lg-3">
+					<h2 class="heading">Project Overview</h2>
+					<p>Robots rely on control algorithms to perform the complex behaviors required for their tasks, and engineers spend large amounts of time developing and tuning control algorithms to ensure good performance.</p>
+
+					<p>However, many robots available to the market do not give users access to their low-level control algorithms. Instead, they only provide access to a simple interface meant for high-level control algorithms or human control. They may also lack control algorithm robustness necessary to handle robot modifications. In these cases, if an engineer wants to develop new or more complex control algorithms on top of these systems, they must either know the underlying, low-level control model, reverse engineer the model, or learn the model. If the low-level model is not disclosed and reverse engineering the model is too difficult, then the dynamics must be learned and used to generate complex control behaviors.</p>
+
+					<p>In this project, we reverse engineer the controls and camera stream of a hobby drone explore one way of learning how the system's high-level controls interact with its low-level controls and the physical world. We do so by training a dynamics model for the drone and using the model to perform model predictive control to pre-set waypoints with the Model Predictive Path Integral (MPPI) algorithm.</p>
+					<!--<img src="images/Umich-MSU.jpg" alt="Image" class="img-fluid">-->
+				</div>
+				<div class="col-lg-7 ms-auto">
+					<div style = "height: 10%; width: 50%;"></div>
+					<img src="images/BrokenPropMagnified.png" alt="Image" class="img-fluid img-r">
+                    <div style = "height: 1%; width: 50%;"></div>
+                    <img src="images/DroneWorkflow.png" alt="Image" class="img-fluid img-r">
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="section sec-1">
+		<div class="container">
+			<div class="row g-0">
+				<div class="col-lg-6">
+					<h2 class="heading">System Background</h2>
+					<h4 style="font-weight: bold;">REVERSE ENGINEERING THE DRONE</h4>
+					<p>The drone used in this project was an F180D drone. The drone produces its own WiFi network to which any WiFi-accessible device can connect. While it comes with a standard drone controller, it can also be controlled from a smart phone or any device that can download and run the GX_UFO app. </p>
+					<p>To access the drone's camera stream and send controls from our own program, we had to access and understand the communications between the drone and the phone application. We ran a packet sniffer on the phone to see what the packets looked like and which ports were used in the communication process by the drone.</p>
+					<p>There were two types of connections that the drone utilized. The first was a TCP connection to port 8888, which was used for most communications. The second was a UDP connection to port 8895, which was solely used for sending commands from the controller to the drone. The UDP port was only opened after a specific packet was sent to the TCP port, and therefore the drone was only able to be controlled after this initialization packet had been sent.</p>
+					<p>The control packets sent to the drone were easy to identify because they were 8 byte packets sent frequently to port 8895. The first, sixth, and eighth bytes never changed and four others were easily mapped to the commands: thrust, roll, pitch, and yaw. The seventh byte was a checksum of the four main commands. The list below shows the formatting where each item is a byte in hexadecimal.</p>
+					<center><p style="font-weight: bold;">[66,  Thrust,  Roll,  Pitch,  Yaw,  00,  Checksum,  99]</p></center>
+					<p>The camera stream had its own initialization packet that told the drone when to start streaming to the computer. The stream was found to use an h264 encoding, which is commonly used for video streaming.</p>
+					
+
+					<h4 style="font-weight: bold;">WHY LEARN THE DYNAMICS MODEL?</h4>
+					<p>As the ultimate goal of this project is to allow the drone to autonomously navigate through waypoints, we need a function that maps a given state and a command (thrust, roll, pitch, and yaw), to a new state. However, there are three problems inhibiting a reverse engineering of the flight controller:</p>
+					<ol>
+						<li>The only sensor capable of providing the state of the drone to the computer is the onboard camera. Otherwise external sensors must be used.</li>
+						<li>The commands do not readily map to physical, continuous, states for the drone propellers. They are taken from discrete values (0-255) and are adjusted by the flight controller according to the drone's onboard IMU, which is inaccessible.</li>
+						<li>The drone used in this work does not follow the expected dynamics from when it was designed, as the tip of the back left propeller is missing.</li>
+					</ol>
+					<p>Thus, we must learn the dynamics of the drone to obtain a model for our model predictive control algorithm.</p>
+
+				</div>
+				<div class="col-lg-4 ms-auto">
+					<div style = "height: 10%; width: 50%;"></div>
+					<img src="images/drone_video_stream.gif" alt="Image" class="img-fluid img-r">
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="section sec-1">
+		<div class="container">
+				<div class="col-lg-3">
+					<h2 class="heading">System Dynamics</h2>
+				</div>
+		</div>
+	</div>
+	<!--<div class="section sec-4">
+		<div class="container">
+			<div class="row border-bottom mb-5 pb-5 justify-content-between">
+				<div class="col-lg-4 align-self-center mb-5">
+					<h2 class="heading mb-4">We create architectural designs</h2>
+					<p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+				</div>
+				<div class="col-lg-7">
+					<a href="https://www.youtube.com/watch?v=mwtbEGNABWU" class="video-wrap glightbox">
+						<span class="icon-play"></span>
+						<img src="images/img_7.jpg" alt="Image" class="img-fluid">
+					</a>
+				</div>
+			</div>
+			<div class="row g-5">
+				<div class="col-lg-4">
+
+					<div class="d-flex custom-card">
+						<div class="img">
+							<i class="flaticon-compass"></i>
+						</div>
+						<div class="text">
+							<h3 class="h6 fw-bold text-black">We provide best services</h3>
+							<p class="text-black-50">Delectus voluptatum distinctio quos eius excepturi sunt pariatur, aut, doloribus officia ea molestias beatae laudantium.</p>
+							<p>
+								<a href="#" class="more-2">Learn more <span class="icon-arrow_forward"></span></a>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4">
+					<div class="d-flex custom-card">
+						<div class="img">
+							<i class="flaticon-plan"></i>
+						</div>
+						<div class="text">
+							<h3 class="h6 fw-bold text-black">We provide best services</h3>
+							<p class="text-black-50">Delectus voluptatum distinctio quos eius excepturi sunt pariatur, aut, doloribus officia ea molestias beatae laudantium.</p>
+							<p>
+								<a href="#" class="more-2">Learn more <span class="icon-arrow_forward"></span></a>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4">
+					<div class="d-flex custom-card">
+						<div class="img">
+							<i class="flaticon-architect"></i>
+						</div>
+						<div class="text">
+							<h3 class="h6 fw-bold text-black">We provide best services</h3>
+							<p class="text-black-50">Delectus voluptatum distinctio quos eius excepturi sunt pariatur, aut, doloribus officia ea molestias beatae laudantium.</p>
+							<p>
+								<a href="#" class="more-2">Learn more <span class="icon-arrow_forward"></span></a>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="section sec-team sec-4 pb-5">
+		<div class="container">
+			<div class="row mb-5">
+				<div class="col-lg-6 mx-auto text-center">
+					<h2 class="heading">We Are The Team</h2>
+				</div>
+				
+			</div>
+			<div class="row g-5">
+				<div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
+					<div class="person">
+						<img src="images/person_1.jpg" alt="Image" class="img-fluid rounded-circle mx-auto w-50 mb-3">
+						<h3 class="mb-1">Jayson Campbell</h3>
+						<span class="d-block text-black-50 mb-3">CEO, Partner</span>
+						<p class="text-black-50">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+						<ul class="social-2 list-unstyled mb-5">
+							<li><a href="#"><span class="icon-facebook"></span></a></li>
+							<li><a href="#"><span class="icon-twitter"></span></a></li>
+							<li><a href="#"><span class="icon-instagram"></span></a></li>
+							<li><a href="#"><span class="icon-dribbble"></span></a></li>
+							<li><a href="#"><span class="icon-linkedin"></span></a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
+					<div class="person">
+						<img src="images/person_2.jpg" alt="Image" class="img-fluid rounded-circle mx-auto w-50 mb-3">
+						<h3 class="mb-1">Jayson Campbell</h3>
+						<span class="d-block text-black-50 mb-3">CEO, Partner</span>
+						<p class="text-black-50">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+						<ul class="social-2 list-unstyled mb-5">
+							<li><a href="#"><span class="icon-facebook"></span></a></li>
+							<li><a href="#"><span class="icon-twitter"></span></a></li>
+							<li><a href="#"><span class="icon-instagram"></span></a></li>
+							<li><a href="#"><span class="icon-dribbble"></span></a></li>
+							<li><a href="#"><span class="icon-linkedin"></span></a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
+					<div class="person">
+						<img src="images/person_3.jpg" alt="Image" class="img-fluid rounded-circle mx-auto w-50 mb-3">
+						<h3 class="mb-1">Jayson Campbell</h3>
+						<span class="d-block text-black-50 mb-3">CEO, Partner</span>
+						<p class="text-black-50">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+						<ul class="social-2 list-unstyled mb-5">
+							<li><a href="#"><span class="icon-facebook"></span></a></li>
+							<li><a href="#"><span class="icon-twitter"></span></a></li>
+							<li><a href="#"><span class="icon-instagram"></span></a></li>
+							<li><a href="#"><span class="icon-dribbble"></span></a></li>
+							<li><a href="#"><span class="icon-linkedin"></span></a></li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
+					<div class="person">
+						<img src="images/person_4.jpg" alt="Image" class="img-fluid rounded-circle mx-auto w-50 mb-3">
+						<h3 class="mb-1">Jayson Campbell</h3>
+						<span class="d-block text-black-50 mb-3">CEO, Partner</span>
+						<p class="text-black-50">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+						<ul class="social-2 list-unstyled mb-5">
+							<li><a href="#"><span class="icon-facebook"></span></a></li>
+							<li><a href="#"><span class="icon-twitter"></span></a></li>
+							<li><a href="#"><span class="icon-instagram"></span></a></li>
+							<li><a href="#"><span class="icon-dribbble"></span></a></li>
+							<li><a href="#"><span class="icon-linkedin"></span></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+
+	
+
+	<div class="site-footer bg-light">
+		<div class="container">
+
+			<div class="row justify-content-between">
+				<div class="col-lg-4">
+					<div class="widget">
+						<h3 class="line-top">About</h3>
+						<p class="mb-5">Delectus voluptatum distinctio quos eius excepturi sunt pariatur, aut, doloribus officia ea molestias beatae laudantium, quam odio ipsum veritatis est maiores velit quasi blanditiis et natus accusamus itaque. Veniam quidem debitis odio amet voluptas distinctio dicta placeat! Et pariatur doloremque ea veniam. Separated they live.</p>
+
+					</div>
+					<div class="widget">
+						<h3 class="line-top">Connect with us</h3>
+						<ul class="social list-unstyled mb-5">
+							<li><a href="#"><span class="icon-facebook"></span></a></li>
+							<li><a href="#"><span class="icon-twitter"></span></a></li>
+							<li><a href="#"><span class="icon-instagram"></span></a></li>
+							<li><a href="#"><span class="icon-dribbble"></span></a></li>
+							<li><a href="#"><span class="icon-linkedin"></span></a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<div class="row">
+						<div class="col-12">
+							<div class="widget">
+								<h3 class="line-top">Navigations</h3>
+							</div>
+						</div>
+						<div class="col-6 col-sm-6 col-md-4">
+							<div class="widget">
+								<ul class="links list-unstyled">
+									<li><a href="#">Home</a></li>
+									<li><a href="#">Services</a></li>
+									<li><a href="#">Work</a></li>
+									<li><a href="#">Process</a></li>
+									<li><a href="#">About Us</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-6 col-sm-6 col-md-4">
+							<div class="widget">
+								<ul class="links list-unstyled">
+									<li><a href="#">Press</a></li>
+									<li><a href="#">Blog</a></li>
+									<li><a href="#">Contact</a></li>
+									<li><a href="#">Support</a></li>
+									<li><a href="#">Privacy</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-6 col-sm-6 col-md-4">
+							<div class="widget">
+								<ul class="links list-unstyled">
+									<li><a href="#">Privacy</a></li>
+									<li><a href="#">FAQ</a></li>
+									<li><a href="#">Careers</a></li>
+									<li><a href="#">Process</a></li>
+									<li><a href="#">About Us</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row justify-content-center text-center copyright">
+				<div class="col-md-8">
+					<p class="small text-black-50">Copyright &copy;<script>document.write(new Date().getFullYear());</script>. All Rights Reserved. &mdash; Designed with love by <a href="https://untree.co">Untree.co</a>
+					</p>
+					
+				</div>
+			</div>
+		</div>
+	</div>-->
+
+
+	
+
+
+	<!-- Preloader -->
+	<div id="overlayer"></div>
+	<div class="loader">
+		<div class="spinner-border" role="status">
+			<span class="visually-hidden">Loading...</span>
+		</div>
+	</div>
+
+	<script src="js/bootstrap.bundle.min.js"></script>
+	<script src="js/tiny-slider.js"></script>
+	<script src="js/aos.js"></script>
+	<script src="js/glightbox.min.js"></script>
+	<script src="js/navbar.js"></script>
+	<script src="js/counter.js"></script>
+	<script src="js/custom.js"></script>
+</body>
+</html>
